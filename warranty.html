@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سامانه گارانتی | پایامش</title>
+  <meta name="description" content="سامانه گارانتی پایامش — ثبت و استعلام گارانتی از طریق پیامک و GSM، مستقل از اینترنت. ویژگی‌ها و پلن‌ها." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="inner-page">
+
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="nebula nebula-1" aria-hidden="true"></div>
+  <div class="nebula nebula-2" aria-hidden="true"></div>
+  <div class="nebula nebula-3" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-orb" aria-hidden="true"></span>
+        <span class="brand-name">پایامش</span>
+      </a>
+      <button class="nav-toggle" aria-label="باز و بسته کردن منو" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#features">مقایسه</a></li>
+        <li><a href="#plans">پلن‌ها</a></li>
+        <li><a href="index.html#products">محصولات</a></li>
+        <li><a href="#contact" class="nav-cta">تماس با ما</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="page-hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow reveal">آماده ارائه</p>
+        <h1 class="hero-title reveal">سامانه گارانتی</h1>
+        <p class="hero-sub reveal">
+          ثبت و استعلام گارانتی از طریق پیامک و شبکه GSM —
+          بدون وابستگی به اینترنت، روی سخت‌افزار محلی شما.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#plans" class="btn btn-primary">مشاهده پلن‌ها</a>
+          <a href="#contact" class="btn btn-ghost">درخواست دمو</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Comparison ============ -->
+    <!-- هر compare-point یک محور مقایسه است؛ نقطه‌های بعدی را همین‌جا اضافه کنید -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">پایامش در برابر روش متداول</h2>
+        <p class="section-sub reveal">
+          روش متداول بازار را کنار پایامش بگذارید و نقطه به نقطه مقایسه کنید.
+        </p>
+
+        <article class="compare-point reveal">
+          <header class="compare-point-head">
+            <span class="compare-index">۰۱</span>
+            <div>
+              <h3>زمان راه‌اندازی</h3>
+              <p>از سفارش و ساخت سامانه تا لحظه‌ای که واقعاً کار می‌کند.</p>
+            </div>
+          </header>
+
+          <div class="compare-frames">
+            <article class="card compare-frame is-classic">
+              <header class="compare-frame-head">
+                <span class="compare-label"><span class="label-wide">روش متداول بازار</span><span class="label-mobile">روش‌های قدیمی</span></span>
+                <p class="compare-time">۲ هفته تا ۲ ماه</p>
+              </header>
+              <ol class="compare-steps">
+                <li>ثبت‌نام و راه‌اندازی پنل پیامک</li>
+                <li>
+                  گرفتن یک شماره خدماتی طولانی و بی‌معنی مثل
+                  <span class="compare-code" dir="ltr">500074635917</span>
+                </li>
+                <li>خرید هاست و معمولاً دامنه</li>
+                <li>سفارش بک‌اند و پرداخت به برنامه‌نویس</li>
+              </ol>
+              <p class="compare-outcome">تا سامانه بالا بیاید، بین دو هفته تا دو ماه زمان و هزینه جداگانه لازم است.</p>
+            </article>
+
+            <span class="compare-vs" aria-hidden="true">در برابر</span>
+
+            <article class="card compare-frame is-payamesh">
+              <header class="compare-frame-head">
+                <span class="compare-label">پایامش</span>
+                <p class="compare-time">کمتر از ۵ دقیقه</p>
+              </header>
+              <ol class="compare-steps">
+                <li>اپلیکیشن را نصب می‌کنید</li>
+                <li>بدون پنل پیامک</li>
+                <li>بدون هاست و دامنه</li>
+                <li>بدون برنامه‌نویس</li>
+              </ol>
+              <p class="compare-outcome">نصب تمام می‌شود و سامانه آماده است — زیر پنج دقیقه.</p>
+            </article>
+          </div>
+        </article>
+
+        <article class="compare-point reveal">
+          <header class="compare-point-head">
+            <span class="compare-index">۰۲</span>
+            <div>
+              <h3>کارکرد هنگام قطع اینترنت</h3>
+              <p>وقتی اینترنت قطع یا مختل می‌شود، سامانه هنوز باید به کار ادامه دهد.</p>
+            </div>
+          </header>
+
+          <div class="compare-frames">
+            <article class="card compare-frame is-classic">
+              <header class="compare-frame-head">
+                <span class="compare-label"><span class="label-wide">روش متداول بازار</span><span class="label-mobile">روش‌های قدیمی</span></span>
+                <p class="compare-time">با قطع اینترنت می‌ایستد</p>
+              </header>
+              <ol class="compare-steps">
+                <li>سرور، هاست و پنل پیامک به اینترنت وابسته‌اند</li>
+                <li>ثبت و استعلام گارانتی از همان مسیر آنلاین می‌گذرد</li>
+                <li>اینترنت که قطع شود، سامانه همان لحظه از کار می‌افتد</li>
+                <li>مشتری و فروشنده هر دو معطل می‌مانند</li>
+              </ol>
+              <p class="compare-outcome">قطع اینترنت یعنی توقف کامل محصول — درست وقتی بیشتر به آن نیاز دارید.</p>
+            </article>
+
+            <span class="compare-vs" aria-hidden="true">در برابر</span>
+
+            <article class="card compare-frame is-payamesh">
+              <header class="compare-frame-head">
+                <span class="compare-label">پایامش</span>
+                <p class="compare-time">تا پیامک برود، کار می‌کند</p>
+              </header>
+              <ol class="compare-steps">
+                <li>ارتباط روی شبکه موبایل و پیامک است، نه اینترنت داده</li>
+                <li>قطع یا اختلال اینترنت خللی در کار ایجاد نمی‌کند</li>
+                <li>در مناطقی که فقط پوشش GSM دارند هم کار می‌کند</li>
+                <li>تا وقتی پیامک در شبکه ارسال شود، سامانه زنده است</li>
+              </ol>
+              <p class="compare-outcome">اینترنت لازم نیست؛ تا پیامک در شبکه برود، پایامش کار می‌کند.</p>
+            </article>
+          </div>
+        </article>
+
+        <article class="compare-point reveal">
+          <header class="compare-point-head">
+            <span class="compare-index">۰۳</span>
+            <div>
+              <h3>تولید سریال و پیام‌ها</h3>
+              <p>سریال، مدت گارانتی، متن پیامک و یادآوری باید دست خودتان باشد — نه پروژه بعدی برنامه‌نویس.</p>
+            </div>
+          </header>
+
+          <div class="compare-frames">
+            <article class="card compare-frame is-classic">
+              <header class="compare-frame-head">
+                <span class="compare-label"><span class="label-wide">روش متداول بازار</span><span class="label-mobile">روش‌های قدیمی</span></span>
+                <p class="compare-time">سفارش به برنامه‌نویس</p>
+              </header>
+              <ol class="compare-steps">
+                <li>تولید سریال و منطق گارانتی باید جداگانه نوشته شود</li>
+                <li>متن پیامک برای هر شرایط باید کدنویسی شود</li>
+                <li>فیلدهایی مثل شهر و کیلومتر یعنی توسعهٔ اضافه</li>
+                <li>یادآوری پایان گارانتی یک پروژه و هزینه جداست</li>
+                <li>گرفتن عکس سریال یا کیلومترشمار از بله و روبیکا و تلگرام یعنی ربات و توسعه جدا</li>
+              </ol>
+              <p class="compare-outcome">هر تغییر یعنی هزینه برنامه‌نویس؛ کاربر عادی نمی‌تواند خودش چیزی را تنظیم کند.</p>
+            </article>
+
+            <span class="compare-vs" aria-hidden="true">در برابر</span>
+
+            <article class="card compare-frame is-payamesh">
+              <header class="compare-frame-head">
+                <span class="compare-label">پایامش</span>
+                <p class="compare-time">تنظیم داخل اپ</p>
+              </header>
+              <ol class="compare-steps">
+                <li>یک سری سریال می‌سازید و مدت گارانتی همان محصول را می‌گذارید</li>
+                <li>پیامک هر شرایط را خودتان می‌نویسید — از جمله وقتی سریال در سامانه باشد</li>
+                <li>اطلاعات اضافه مثل شهر و کیلومتر را هنگام ثبت می‌گیرید</li>
+                <li>در پایان مدت گارانتی، پیامک یادآوری به‌صورت خودکار ارسال می‌شود</li>
+                <li>سریال‌های ثبت‌شده را در یک کارت گروهی می‌بینید، ویرایش می‌کنید و کارهای بیشتری روی همان گروه انجام می‌دهید</li>
+                <li>تأیید تصویری را روی همان گروه روشن می‌کنید؛ مشتری برای تمام‌کردن ثبت باید عکس سریال یا کیلومترشمار را در بله، روبیکا یا تلگرام بفرستد</li>
+              </ol>
+              <p class="compare-outcome">پیام‌های خودتان همان لحظه اعمال می‌شوند؛ بدون توسعه و بدون هزینه برنامه‌نویس — قابل تنظیم برای کاربر عادی، داخل خود اپ.</p>
+              <button type="button" class="visual-explain-btn" data-gallery="serial">
+                <span class="visual-explain-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.4"/><path d="M21 16l-5.2-5.2a1.2 1.2 0 00-1.7 0L8 17"/></svg>
+                </span>
+                <span class="visual-explain-copy">
+                  <strong>توضیح تصویری</strong>
+                  <span>ببینید چطور در اپ کار می‌کند</span>
+                </span>
+              </button>
+            </article>
+          </div>
+        </article>
+
+        <article class="compare-point reveal">
+          <header class="compare-point-head">
+            <span class="compare-index">۰۴</span>
+            <div>
+              <h3>کنترل پیام‌های ورودی و خروجی</h3>
+              <p>همه مکالمات باید داخل اپ باشد؛ نه در یک پنل پیامک جداگانه.</p>
+            </div>
+          </header>
+
+          <div class="compare-frames">
+            <article class="card compare-frame is-classic">
+              <header class="compare-frame-head">
+                <span class="compare-label"><span class="label-wide">روش متداول بازار</span><span class="label-mobile">روش‌های قدیمی</span></span>
+                <p class="compare-time">وابسته به پنل پیامک</p>
+              </header>
+              <ol class="compare-steps">
+                <li>برای دیدن پیامک‌ها باید وارد پنل جداگانه شوید</li>
+                <li>ورودی و خروجی در یک جا جمع نیستند</li>
+                <li>پاسخ به مشتری یعنی پیدا کردن شماره در پنل پیامک</li>
+                <li>از داخل سامانه گارانتی نمی‌توانید مستقیم پیام بفرستید</li>
+              </ol>
+              <p class="compare-outcome">بدون چک‌کردن پنل پیامک، نمی‌دانید چه آمده و چه رفته است.</p>
+            </article>
+
+            <span class="compare-vs" aria-hidden="true">در برابر</span>
+
+            <article class="card compare-frame is-payamesh">
+              <header class="compare-frame-head">
+                <span class="compare-label">پایامش</span>
+                <p class="compare-time">همه داخل اپ</p>
+              </header>
+              <ol class="compare-steps">
+                <li>پیام‌های ورودی و خروجی را در خود اپ می‌بینید و کنترل می‌کنید</li>
+                <li>نیازی به چک‌کردن پنل پیامک نیست</li>
+                <li>روی یک پیام کلیک می‌کنید و تاریخچه کامل گفتگو با همان مشتری را می‌بینید</li>
+                <li>ارسال مستقیم از داخل اپ، بدون رفتن به جای دیگر</li>
+              </ol>
+              <p class="compare-outcome">همه مکالمات داخل اپ است؛ با یک کلیک روی پیام، کل تاریخچه همان مشتری باز می‌شود.</p>
+              <button type="button" class="visual-explain-btn" data-gallery="messages">
+                <span class="visual-explain-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.4"/><path d="M21 16l-5.2-5.2a1.2 1.2 0 00-1.7 0L8 17"/></svg>
+                </span>
+                <span class="visual-explain-copy">
+                  <strong>توضیح تصویری</strong>
+                  <span>ببینید چطور در اپ کار می‌کند</span>
+                </span>
+              </button>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ How it works ============ -->
+    <section class="section section-tight">
+      <div class="container">
+        <h2 class="section-title reveal">نحوه کار</h2>
+        <p class="section-sub reveal">از تولید سریال تا ارتباط با مشتری، همه مراحل روی GSM و زیرساخت خودتان انجام می‌شود.</p>
+        <ol class="steps-grid">
+          <li class="card step-card reveal">
+            <span class="step-num">۱</span>
+            <h3>تولید سریال</h3>
+            <p>سریال‌های ضدتقلب را در پنل محلی می‌سازید و روی محصول می‌زنید.</p>
+          </li>
+          <li class="card step-card reveal">
+            <span class="step-num">۲</span>
+            <h3>ثبت توسط مشتری</h3>
+            <p>خریدار با پیامک، روبیکا یا تلگرام کد را ارسال و گارانتی را فعال می‌کند.</p>
+          </li>
+          <li class="card step-card reveal">
+            <span class="step-num">۳</span>
+            <h3>استعلام در لحظه</h3>
+            <p>وضعیت گارانتی همان لحظه روی شبکه GSM پاسخ داده می‌شود؛ اینترنت لازم نیست.</p>
+          </li>
+          <li class="card step-card reveal">
+            <span class="step-num">۴</span>
+            <h3>باشگاه و اطلاع‌رسانی</h3>
+            <p>پیام‌های خودکار و ارسال انبوه، ارتباط با مشتری را بعد از فروش حفظ می‌کند.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Plans ============ -->
+    <!-- نام، قیمت و امکانات هر پلن را از اینجا ویرایش کنید -->
+    <section id="plans" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">پلن‌ها</h2>
+        <p class="section-sub reveal">
+          پلن مناسب کسب‌وکار خود را انتخاب کنید. برای قیمت، سفارشی‌سازی یا دمو با ما تماس بگیرید.
+        </p>
+
+        <div class="grid grid-3 plans-grid">
+          <article class="card plan-card reveal">
+            <h3 class="plan-name">پایه</h3>
+            <p class="plan-tagline">شروع کار با ثبت و استعلام گارانتی</p>
+            <p class="plan-price">تماس بگیرید</p>
+            <ul class="feature-list">
+              <li>ثبت و استعلام گارانتی با پیامک</li>
+              <li>تولید و مدیریت سریال</li>
+              <li>پنل مدیریت روی شبکه محلی یا گوشی</li>
+              <li>مستقل از اینترنت و قابل اجرا روی GSM</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost plan-cta">درخواست این پلن</a>
+          </article>
+
+          <article class="card plan-card is-featured reveal">
+            <span class="product-badge ready plan-badge">پیشنهادی</span>
+            <h3 class="plan-name">حرفه‌ای</h3>
+            <p class="plan-tagline">کانال‌های بیشتر و باشگاه مشتریان</p>
+            <p class="plan-price">تماس بگیرید</p>
+            <ul class="feature-list">
+              <li>همه امکانات پلن پایه</li>
+              <li>پشتیبانی از روبیکا و تلگرام</li>
+              <li>باشگاه مشتریان و پیام‌های خودکار</li>
+              <li>یادآوری پایان دوره گارانتی</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary plan-cta">درخواست این پلن</a>
+          </article>
+
+          <article class="card plan-card reveal">
+            <h3 class="plan-name">سازمانی</h3>
+            <p class="plan-tagline">برای برندها و حجم بالای مشتری</p>
+            <p class="plan-price">تماس بگیرید</p>
+            <ul class="feature-list">
+              <li>همه امکانات پلن حرفه‌ای</li>
+              <li>ارسال انبوه پیامک و واتساپ</li>
+              <li>نصب روی سخت‌افزار محلی سازمان</li>
+              <li>پشتیبانی و آموزش اختصاصی</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost plan-cta">درخواست این پلن</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">درخواست دمو یا پلن</h2>
+        <p class="section-sub reveal">
+          برای مشاوره رایگان، دریافت دمو یا انتخاب پلن سامانه گارانتی، از هر یک از راه‌های زیر با ما در ارتباط باشید.
+        </p>
+        <div class="grid grid-3 contact-grid">
+          <a class="card contact-card reveal" href="tel:+989902648065">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>
+            </div>
+            <h3>تماس تلفنی</h3>
+            <p class="contact-value" dir="ltr">۰۹۹۰ ۲۶۴ ۸۰۶۵</p>
+            <p class="contact-note">شنبه تا پنجشنبه، ۹ تا ۱۸</p>
+          </a>
+          <a class="card contact-card reveal" href="sms:+989902648065">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>پیامک</h3>
+            <p class="contact-value" dir="ltr">۰۹۹۰ ۲۶۴ ۸۰۶۵</p>
+            <p class="contact-note">در هر ساعت شبانه‌روز پیام بدهید</p>
+          </a>
+          <a class="card contact-card reveal" href="https://t.me/argsim" target="_blank" rel="noopener">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3L2 10.5l6.5 2.5M22 3l-4 18-7.5-8M22 3L10.5 13l-2 6.5-2-7"/></svg>
+            </div>
+            <h3>تلگرام</h3>
+            <p class="contact-value" dir="ltr">@argsim</p>
+            <p class="contact-note">پاسخ‌گویی سریع در پیام‌رسان</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html">
+        <span class="brand-orb" aria-hidden="true"></span>
+        <span class="brand-name">پایامش</span>
+      </a>
+      <p class="footer-about">
+        سامانه گارانتی پایامش — مستقل از اینترنت، قابل اجرا روی GSM و پیامک.
+      </p>
+      <p class="footer-copy">© ۱۴۰۵ پایامش — تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <!-- اسلایدر توضیح تصویری: تصاویر را در img/warranty/ بگذارید و متن هر اسلاید را این‌جا ویرایش کنید -->
+  <dialog class="gallery-modal" id="gallery-serial" aria-labelledby="gallery-serial-title">
+    <div class="gallery-dialog">
+      <header class="gallery-toolbar">
+        <h2 id="gallery-serial-title">تولید سریال و پیام‌ها در پایامش</h2>
+        <button type="button" class="gallery-close" data-gallery-close aria-label="بستن">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="gallery-stage">
+        <button type="button" class="gallery-nav prev" data-gallery-prev aria-label="اسلاید قبلی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="gallery-viewport">
+          <figure class="gallery-slide is-active">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-1.png" alt="تولید سریال با متدهای مختلف">
+            </div>
+            <figcaption>
+              <h3>تولید سریال با متدهای مختلف</h3>
+              <p>سریال را با روش‌های مختلف می‌سازید؛ حتی می‌توانید از اکسل هم وارد کنید.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-2.png" alt="تنظیم مدت گارانتی محصول">
+            </div>
+            <figcaption>
+              <h3>تنظیم مدت گارانتی محصول</h3>
+              <p>مدت گارانتی همان محصول را تنظیم می‌کنید. در پایان این مدت، سامانه برای مشتری پیامک یادآوری می‌فرستد که دوره گارانتی تمام شده است.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-3.png" alt="تنظیم متن پیامک ارسالی به مشتریان">
+            </div>
+            <figcaption>
+              <h3>تنظیم متن پیامک ارسالی به مشتریان</h3>
+              <p>متن پیامک هر شرایط را خودتان می‌نویسید. سامانه همان پیام‌ها را فوری استفاده می‌کند.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-4.png" alt="اضافه کردن توضیحات به دسته">
+            </div>
+            <figcaption>
+              <h3>اضافه کردن توضیحات به دسته</h3>
+              <p>برای سری محصولات اطلاعات اضافی را وارد کنید؛ مثلاً تسمه پراید، تایر سورن و موارد مشابه.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-5.png" alt="یادآوری پایان گارانتی">
+            </div>
+            <figcaption>
+              <h3>یادآوری پایان گارانتی</h3>
+              <p>در پایان مدت گارانتی، پیامک یادآوری به‌صورت خودکار برای مشتری ارسال می‌شود که دوره گارانتی تمام شده است.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-6.png" alt="سریال‌های ثبت‌شده در کارت گروهی">
+            </div>
+            <figcaption>
+              <h3>سریال‌های ثبت‌شده</h3>
+              <p>سریال‌های ثبت‌شده را در یک کارت به‌صورت گروه می‌بینید؛ می‌توانید ویرایش کنید و کارهای بیشتری روی همان گروه انجام دهید.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/serial-7.png" alt="تأیید تصویری با بله، روبیکا یا تلگرام">
+            </div>
+            <figcaption>
+              <h3>تأیید تصویری</h3>
+              <p>روی کارت همان گروه، تأیید تصویری را روشن می‌کنید. مشتری برای تمام‌کردن ثبت محصول باید عکس سریال یا کیلومترشمار خودرو را در بله، روبیکا یا تلگرام بفرستد.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <button type="button" class="gallery-nav next" data-gallery-next aria-label="اسلاید بعدی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="gallery-footer">
+        <p class="gallery-counter" data-gallery-counter>۱ / ۷</p>
+        <div class="gallery-dots" data-gallery-dots></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="gallery-modal" id="gallery-messages" aria-labelledby="gallery-messages-title">
+    <div class="gallery-dialog">
+      <header class="gallery-toolbar">
+        <h2 id="gallery-messages-title">کنترل پیام‌ها در پایامش</h2>
+        <button type="button" class="gallery-close" data-gallery-close aria-label="بستن">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="gallery-stage">
+        <button type="button" class="gallery-nav prev" data-gallery-prev aria-label="اسلاید قبلی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="gallery-viewport">
+          <figure class="gallery-slide is-active">
+            <div class="gallery-media">
+              <img src="img/warranty/messages-1.png" alt="پیام‌های ورودی و خروجی داخل اپ">
+            </div>
+            <figcaption>
+              <h3>همه پیام‌ها داخل اپ</h3>
+              <p>پیامک‌های ورودی و خروجی را در خود اپ می‌بینید و کنترل می‌کنید؛ نیازی به پنل پیامک جداگانه نیست.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide">
+            <div class="gallery-media">
+              <img src="img/warranty/messages-2.png" alt="تاریخچه کامل گفتگو با مشتری">
+            </div>
+            <figcaption>
+              <h3>تاریخچه گفتگو با مشتری</h3>
+              <p>روی یک پیام کلیک می‌کنید و تاریخچه کامل ارتباط با همان مشتری را می‌بینید.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <button type="button" class="gallery-nav next" data-gallery-next aria-label="اسلاید بعدی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="gallery-footer">
+        <p class="gallery-counter" data-gallery-counter>۱ / ۲</p>
+        <div class="gallery-dots" data-gallery-dots></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

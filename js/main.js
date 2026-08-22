@@ -90,4 +90,112 @@
       toggle.setAttribute("aria-expanded", "false");
     }
   });
+
+  /* ============ Image galleries ============ */
+  var FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n) {
+    return String(n).replace(/\d/g, function (d) { return FA_DIGITS[d]; });
+  }
+
+  function bindGallery(modal) {
+    var slides = modal.querySelectorAll(".gallery-slide");
+    var prevBtn = modal.querySelector("[data-gallery-prev]");
+    var nextBtn = modal.querySelector("[data-gallery-next]");
+    var counter = modal.querySelector("[data-gallery-counter]");
+    var dotsWrap = modal.querySelector("[data-gallery-dots]");
+    var viewport = modal.querySelector(".gallery-viewport");
+    var index = 0;
+    var startX = 0;
+
+    slides.forEach(function (slide) {
+      var img = slide.querySelector("img");
+      if (!img) return;
+      img.addEventListener("error", function () {
+        img.hidden = true;
+        if (slide.querySelector(".gallery-placeholder")) return;
+        var ph = document.createElement("div");
+        ph.className = "gallery-placeholder";
+        ph.textContent = "تصویر را در مسیر «" + img.getAttribute("src") + "» قرار دهید.";
+        img.parentNode.appendChild(ph);
+      });
+    });
+
+    if (dotsWrap) {
+      dotsWrap.innerHTML = "";
+      slides.forEach(function (_, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "gallery-dot";
+        dot.setAttribute("aria-label", "اسلاید " + toFa(i + 1));
+        dot.addEventListener("click", function () { show(i); });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function show(i) {
+      if (!slides.length) return;
+      index = (i + slides.length) % slides.length;
+      slides.forEach(function (slide, n) {
+        slide.classList.toggle("is-active", n === index);
+      });
+      if (dotsWrap) {
+        Array.prototype.forEach.call(dotsWrap.children, function (dot, n) {
+          dot.classList.toggle("is-active", n === index);
+        });
+      }
+      if (counter) counter.textContent = toFa(index + 1) + " / " + toFa(slides.length);
+    }
+
+    function open() {
+      show(0);
+      if (typeof modal.showModal === "function") modal.showModal();
+      else modal.setAttribute("open", "");
+    }
+
+    function close() {
+      if (typeof modal.close === "function" && modal.open) modal.close();
+      else modal.removeAttribute("open");
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { show(index - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) close();
+    });
+    modal.querySelectorAll("[data-gallery-close]").forEach(function (btn) {
+      btn.addEventListener("click", close);
+    });
+    modal.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") show(index + 1);
+      if (e.key === "ArrowRight") show(index - 1);
+    });
+
+    if (viewport) {
+      viewport.addEventListener("touchstart", function (e) {
+        startX = e.changedTouches[0].clientX;
+      }, { passive: true });
+      viewport.addEventListener("touchend", function (e) {
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) < 40) return;
+        if (dx > 0) show(index - 1);
+        else show(index + 1);
+      }, { passive: true });
+    }
+
+    show(0);
+    return { open: open, close: close };
+  }
+
+  var galleries = {};
+  document.querySelectorAll(".gallery-modal").forEach(function (modal) {
+    galleries[modal.id] = bindGallery(modal);
+  });
+
+  document.querySelectorAll("[data-gallery]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var g = galleries["gallery-" + btn.getAttribute("data-gallery")];
+      if (g) g.open();
+    });
+  });
 })();
